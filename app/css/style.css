@@ -110,6 +110,24 @@ input {
   -webkit-transition: -webkit-transform 0.3s, bottom 0.3s;
   transition: transform 0.3s, bottom 0.3s;
 }
+.locate {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 20px 20px;
+  float: right;
+  background-image: url(svg/ic_my_location_24px.svg);
+  z-index: 2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
 @media (min-width: 768px) {
   .map-card {
     width: 80%;
