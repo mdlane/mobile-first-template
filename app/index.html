@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon" sizes="114x114" href="TNMap-icon-iphone4.png">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,300,700,400">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="lib/leaflet.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!--[if lt IE 9]>
@@ -25,8 +26,10 @@
   <!--Search box container-->
   <div class="search-box"><input type="search" placeholder="Search"></div>
   <!--Map-->
-  <div id="map" ng-controller="MapControl" ng-click="select()"></div>
-  <div class="locate"><i class="material-icons md-dark md-inactive">&#xE55C;</i></div>
+  <div id="map" ng-controller="MapControl">
+    <leaflet defaults="defaults" bounds="bounds" center="center"></leaflet>
+  </div>
+  <div class="locate" ng-controller="LocateControl" ng-click="locate()"><i class="material-icons md-dark md-inactive">&#xE55C;</i></div>
   <!--Placeholder for different routed content-->
   <div class="map-card" ng-controller="CardControl" ng-click="toggle()">
     <div><i class="close material-icons md-dark md-inactive" ng-click="removecard($event)">&#xE5CD;</i></div>
@@ -42,8 +45,10 @@
       </p>
     </div>
   </div>
+  <script src="lib/leaflet.js"></script>
   <script src="lib/angular.min.js"></script>
   <script src="lib/angular-route.min.js"></script>
+  <script src="lib/angular-leaflet-directive.min.js"></script>
   <script src="js/site.min.js"></script>
 </body>
 </html>

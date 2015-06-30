@@ -89,6 +89,10 @@ input {
  background-color: rgb(244, 244, 244);
  z-index: 1;
 }
+.angular-leaflet-map {
+  width:  100%;
+  height:  100%;
+}
 .map-card {
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   height: 70%;
